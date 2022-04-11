@@ -1,4 +1,4 @@
-Step H must be finished before step C can begin.
+﻿Step H must be finished before step C can begin.
 Step R must be finished before step S can begin.
 Step F must be finished before step M can begin.
 Step S must be finished before step Z can begin.
