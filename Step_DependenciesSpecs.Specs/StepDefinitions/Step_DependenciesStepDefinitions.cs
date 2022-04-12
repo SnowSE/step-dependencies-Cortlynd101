@@ -38,50 +38,22 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
             }
             else
             {
-                LinkedList<char> currentLinkedList = stepDependencyList.First();
-
-                if (currentLinkedList.First != null) //We need to make sure the first node isn't null.
+                bool succesfulTest = false;
+                foreach (LinkedList<char> dependents in stepDependencyList)
                 {
-                    LinkedListNode<char> currentLinkedListNode = currentLinkedList.First; //We grab the first node.
-
-                    for (int i = 0; i < stepDependencyList.Count; i++) //We iterate through the list of linked lists as we don't know which linked list had the value.
+                    if (dependents.First.Value == c0)
                     {
-                        
-                        if (currentLinkedListNode.Value == c0) //Pass the first step.
+                        dependents.First.Value.Should().Be(c0);
+                        if (dependents.Last.Value == c1)
                         {
-                            currentLinkedListNode.Value.Should().Be(c0);
-                            currentLinkedListNode = currentLinkedListNode.Next;
-
-                            for (int j = 0; j < currentLinkedList.Count; j++)
-                            {
-                                if (currentLinkedListNode.Value == c1) //Pass the second step.
-                                {
-                                    currentLinkedListNode.Value.Should().Be(c1);
-                                }
-
-                                if (currentLinkedListNode.Next != null) //Make sure the next node isn't null.
-                                {
-                                    currentLinkedListNode = currentLinkedListNode.Next;
-                                }
-
-                                if (j == currentLinkedList.Count - 1 && currentLinkedListNode.Next == null) //This means that the next step couldn't be found and it fails the test.
-                                {
-                                    Exception noStepAfterInitalStep = new Exception( currentLinkedListNode.Value + "The step that was supposed to follow the inital step is not in the list.");
-                                    throw noStepAfterInitalStep;
-                                }
-                            }
+                            dependents.Last.Value.Should().Be(c1);
+                            succesfulTest = true;
                         }
-                        else //This means that it couldn't find that step and it fails the test.
-                        {
-                            Exception noInitalStep = new Exception( currentLinkedListNode.Value + "The inital step is not the head of a linked list in the list of linked lists.");
-                            throw noInitalStep;
-                        }
-
-                        if (stepDependencyList[i + 1] != null) //Make sure the next list isn't null.
-                        {
-                            currentLinkedList = stepDependencyList[i + 1];
-                        }  
                     }
+                }
+                if (succesfulTest == false)
+                {
+                    Exception DependentPairNotInList = new Exception($"The dependency pair {c0}, {c1} was not found in the list.");
                 }
             }
         }
@@ -106,3 +78,12 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
 
     }
 }
+
+
+
+
+
+
+
+
+
