@@ -22,8 +22,7 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
         [When(@"the line is parsed")]
         public void WhenTheLineIsParsed()
         {
-            StepDependency stepDependency = new StepDependency();
-            stepDependency = new StepDependency(context.Get<string>("practiceFile"), stepDependency);
+            StepDependency stepDependency = new StepDependency(context.Get<string>("practiceFile"));
             context.Add("stepsDependency", stepDependency);
         }
 
@@ -51,6 +50,7 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
                         if (currentLinkedListNode.Value == c0) //Pass the first step.
                         {
                             currentLinkedListNode.Value.Should().Be(c0);
+                            currentLinkedListNode = currentLinkedListNode.Next;
 
                             for (int j = 0; j < currentLinkedList.Count; j++)
                             {
@@ -66,14 +66,14 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
 
                                 if (j == currentLinkedList.Count - 1 && currentLinkedListNode.Next == null) //This means that the next step couldn't be found and it fails the test.
                                 {
-                                    Exception noStepAfterInitalStep = new Exception("The step that was supposed to follow the inital step is not in the list.");
+                                    Exception noStepAfterInitalStep = new Exception( currentLinkedListNode.Value + "The step that was supposed to follow the inital step is not in the list.");
                                     throw noStepAfterInitalStep;
                                 }
                             }
                         }
                         else //This means that it couldn't find that step and it fails the test.
                         {
-                            Exception noInitalStep = new Exception("The inital step is not the head of a linked list in the list of linked lists.");
+                            Exception noInitalStep = new Exception( currentLinkedListNode.Value + "The inital step is not the head of a linked list in the list of linked lists.");
                             throw noInitalStep;
                         }
 

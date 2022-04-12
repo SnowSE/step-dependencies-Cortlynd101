@@ -118,8 +118,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
- testRunner.Given("the file path C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_Dependencies\\Practice" +
-                        "File.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the file path C:\\Users\\Tyler\\Desktop\\scheduler item\\Step_Dependencies\\PracticeFil" +
+                        "e.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
  testRunner.When("the line is parsed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

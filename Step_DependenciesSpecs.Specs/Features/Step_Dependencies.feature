@@ -3,7 +3,7 @@
 
 @mytag
 Scenario Outline: Create Dependencies
-	Given the file path C:\Users\Cortl\source\repos\Dependencies\Step_Dependencies\PracticeFile.txt
+	Given the file path C:\Users\Tyler\Desktop\scheduler item\Step_Dependencies\PracticeFile.txt
 	When the line is parsed
 	Then <firstChar> is done before <secondChar>
 	Examples: 
