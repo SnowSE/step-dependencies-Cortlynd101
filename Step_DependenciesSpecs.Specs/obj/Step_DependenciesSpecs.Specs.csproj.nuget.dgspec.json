@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_DependenciesSpecs.Specs\\Step_DependenciesSpecs.Specs.csproj": {}
+    "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_DependenciesSpecs.Specs\\Step_DependenciesSpecs.Specs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_DependenciesSpecs.Specs\\Step_DependenciesSpecs.Specs.csproj": {
+    "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_DependenciesSpecs.Specs\\Step_DependenciesSpecs.Specs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_DependenciesSpecs.Specs\\Step_DependenciesSpecs.Specs.csproj",
+        "projectUniqueName": "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_DependenciesSpecs.Specs\\Step_DependenciesSpecs.Specs.csproj",
         "projectName": "Step_DependenciesSpecs.Specs",
-        "projectPath": "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_DependenciesSpecs.Specs\\Step_DependenciesSpecs.Specs.csproj",
+        "projectPath": "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_DependenciesSpecs.Specs\\Step_DependenciesSpecs.Specs.csproj",
         "packagesPath": "C:\\Users\\Cortl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_DependenciesSpecs.Specs\\obj\\",
+        "outputPath": "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_DependenciesSpecs.Specs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Cortl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_Dependencies\\Step_Dependencies.csproj": {
-                "projectPath": "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_Dependencies\\Step_Dependencies.csproj"
+              "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Dependencies\\Step_Dependencies.csproj": {
+                "projectPath": "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Dependencies\\Step_Dependencies.csproj"
               }
             }
           }
@@ -88,11 +88,11 @@
         }
       }
     },
-    "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_Dependencies\\Step_Dependencies.csproj": {
+    "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Dependencies\\Step_Dependencies.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_Dependencies\\Step_Dependencies.csproj",
+        "projectUniqueName": "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Dependencies\\Step_Dependencies.csproj",
         "projectName": "Step_Dependencies",
-        "projectPath": "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_Dependencies\\Step_Dependencies.csproj",
+        "projectPath": "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Dependencies\\Step_Dependencies.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sQKcarxMV60fotT7X7/IVzHmzEX3VVyqHGPD/TjjrpPXl5u7AXcOo24he5azMMev6cMvFz4urQvuTr6SooCP+Q==",
+  "dgSpecHash": "BExTLIRV2uJf4u73K/VVSmXykRUHOFvm6Ckqu/ebBd+Jz9OAUMmpi+icPfFk8J0geUX7H5zh4cSUoiELzMOlpw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cortl\\source\\repos\\Dependencies\\Step_DependenciesSpecs.Specs\\Step_DependenciesSpecs.Specs.csproj",
+  "projectFilePath": "C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_DependenciesSpecs.Specs\\Step_DependenciesSpecs.Specs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cortl\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\Cortl\\.nuget\\packages\\fluentassertions\\6.2.0\\fluentassertions.6.2.0.nupkg.sha512",
