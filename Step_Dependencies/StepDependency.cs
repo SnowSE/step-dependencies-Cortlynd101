@@ -23,10 +23,50 @@ namespace Step_Dependencies
         //This method returns a List of LinkedLists of chars after creating said list based on a file.
         {
             ListMaker(file);
+            for (int i = 0; i < stepsList.Count; i++)
+            {
+                checkForLeftovers();
+            }
             return stepsList;
         }
-        
-        //name needs work
+
+        private void checkForLeftovers()
+        //This method checks if any steps don't have steps that are dependent on them and adds them last.
+        {
+            var stepDependencyList = stepsList;
+            string line = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            bool dontAddAnything = false;
+
+            foreach(char character in line)
+            { 
+                foreach (LinkedList<char> dependents in stepDependencyList)
+                {
+                    if (dependents.Last.Value == character)
+                    {
+                        char secondValue = dependents.Last.Value;
+
+                        foreach (LinkedList<char> dependentsAgain in stepDependencyList)
+                        {
+                            if (dependentsAgain.First.Value == secondValue)
+                            {
+                                dontAddAnything = true;
+                            }
+                        }
+
+                        if (dontAddAnything == false)
+                        {
+                            LinkedList<char> lastAdded = new LinkedList<char>();
+                            lastAdded.AddFirst(secondValue);
+                            stepsList.Add(lastAdded);
+                            break;
+                        }
+
+                        dontAddAnything = false; 
+                    }
+                }
+            }
+        }
+
         //This method takes in a file path and retrives a given text file from it
         public void ListMaker(string depedancySource)
         {
@@ -70,10 +110,11 @@ namespace Step_Dependencies
                 dependancyPair.AddLast(dependant);
                 stepsList.Add(dependancyPair);
             }
-
         }
         public void GetDependentOrder()
         {
+            isCharDependent = true;
+
             var currList = 0;
             while(isCharDependent == true)
             {
@@ -82,20 +123,22 @@ namespace Step_Dependencies
 
                 foreach (LinkedList<char> dependant in stepsList)
                 {
-                    if(firstHead == dependant.First.Next.Value)
+                    if (dependant.First.Next != null)
                     {
-                        break;
-                    }
-                    else
-                    {
-                        isCharDependent = false;
-                        checkToSeeIfCharIsAlreadyWritten(firstHead);
-                        CharCanBeWritten(firstHead, currList);
+                        if (firstHead == dependant.First.Next.Value)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            isCharDependent = false;
+                            checkToSeeIfCharIsAlreadyWritten(firstHead);
+                            CharCanBeWritten(firstHead, currList);
+                        }
                     }
                 }
                 currList++;
             }
-
         }
 
         public void checkToSeeIfCharIsAlreadyWritten(char c)
@@ -108,8 +151,10 @@ namespace Step_Dependencies
                     foundChar = true;
                 } 
             }
-            if(!foundChar)
-            addingNonDenpendedChar(c);
+            if (!foundChar)
+            {
+                addingNonDenpendedChar(c);
+            }
         }
 
         public void addingNonDenpendedChar(char c)
@@ -124,8 +169,11 @@ namespace Step_Dependencies
         public void CharCanBeWritten(char c, int currList)
         {
             var nonDenpendentChar = stepsList[currList].First;
-            stepsList[currList].First.Value = nonDenpendentChar.Next.Value;
-            nonDenpendentChar.Next.Value = '\0';
+            if (nonDenpendentChar.Next != null)
+            {
+                stepsList[currList].First.Value = nonDenpendentChar.Next.Value;
+                nonDenpendentChar.Next.Value = '\0';
+            }
         }
     }
 }

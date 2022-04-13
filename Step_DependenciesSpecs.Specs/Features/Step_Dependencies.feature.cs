@@ -118,7 +118,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
- testRunner.Given("the file path C:\\Users\\brebr\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Depe" +
+ testRunner.Given("the file path C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Depe" +
                         "ndencies\\PracticeFile.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
@@ -167,7 +167,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 21
- testRunner.Given("the file path C:\\Users\\brebr\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Depe" +
+ testRunner.Given("the file path C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Depe" +
                         "ndencies\\PracticeFile.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 22
@@ -176,7 +176,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 23
  testRunner.Given("list head", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 25
+#line 24
  testRunner.Then(string.Format("the {0} step that is done should be {1}", number, @char), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

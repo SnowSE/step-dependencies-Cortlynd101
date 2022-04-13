@@ -65,15 +65,7 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
             for (int i = 0; i < dependencyClass.stepsList.Count; i++)
             {
                 dependencyClass.GetDependentOrder();
-
             } 
-            
-        }
-
-        [When(@"checking against all nodes")]
-        public void WhenCheckingAgainstAllNodes()
-        {
-            throw new PendingStepException();
         }
 
         [Then(@"the (.*) step that is done should be (.*)")]
@@ -81,7 +73,6 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
         {
             context.Get<StepDependency>("stepsDependency").orderOfNonDependent[p0].Should().Be(c0);
         }
-
     }
 }
 

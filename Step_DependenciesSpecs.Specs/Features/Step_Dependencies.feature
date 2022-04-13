@@ -3,7 +3,7 @@
 
 @mytag
 Scenario Outline: Create Dependencies
-	Given the file path C:\Users\brebr\Source\Repos\step-dependencies-Cortlynd101\Step_Dependencies\PracticeFile.txt
+	Given the file path C:\Users\Cortl\Source\Repos\step-dependencies-Cortlynd101\Step_Dependencies\PracticeFile.txt
 	When the line is parsed
 	Then <firstChar> is done before <secondChar>
 	Examples: 
@@ -18,10 +18,9 @@ Scenario Outline: Create Dependencies
 
 
 Scenario Outline: Find Dependencies
-	Given the file path C:\Users\brebr\Source\Repos\step-dependencies-Cortlynd101\Step_Dependencies\PracticeFile.txt
+	Given the file path C:\Users\Cortl\Source\Repos\step-dependencies-Cortlynd101\Step_Dependencies\PracticeFile.txt
 	When the line is parsed
 	Given list head
-	#When checking against all nodes
 	Then the <number> step that is done should be <char>
 	Examples: 
 	| number | char |
