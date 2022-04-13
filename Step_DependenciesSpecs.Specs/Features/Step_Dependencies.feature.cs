@@ -118,8 +118,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
- testRunner.Given("the file path C:\\Users\\Tyler\\Desktop\\scheduler item\\Step_Dependencies\\PracticeFil" +
-                        "e.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the file path C:\\Users\\brebr\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Depe" +
+                        "ndencies\\PracticeFile.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
  testRunner.When("the line is parsed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -133,12 +133,12 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Find Dependencies")]
-        [NUnit.Framework.TestCaseAttribute("1", "C", null)]
-        [NUnit.Framework.TestCaseAttribute("2", "A", null)]
-        [NUnit.Framework.TestCaseAttribute("3", "B", null)]
-        [NUnit.Framework.TestCaseAttribute("4", "D", null)]
-        [NUnit.Framework.TestCaseAttribute("5", "F", null)]
-        [NUnit.Framework.TestCaseAttribute("6", "E", null)]
+        [NUnit.Framework.TestCaseAttribute("0", "C", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "A", null)]
+        [NUnit.Framework.TestCaseAttribute("2", "B", null)]
+        [NUnit.Framework.TestCaseAttribute("3", "D", null)]
+        [NUnit.Framework.TestCaseAttribute("4", "F", null)]
+        [NUnit.Framework.TestCaseAttribute("5", "E", null)]
         public virtual void FindDependencies(string number, string @char, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -167,12 +167,16 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 21
- testRunner.Given("list head", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the file path C:\\Users\\brebr\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Depe" +
+                        "ndencies\\PracticeFile.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 22
- testRunner.When("checking against all nodes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the line is parsed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 23
+ testRunner.Given("list head", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 25
  testRunner.Then(string.Format("the {0} step that is done should be {1}", number, @char), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

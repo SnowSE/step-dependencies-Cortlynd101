@@ -61,7 +61,13 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
         [Given(@"list head")]
         public void GivenListHead()
         {
-            throw new PendingStepException();
+            var dependencyClass = context.Get<StepDependency>("stepsDependency");
+            for (int i = 0; i < dependencyClass.stepsList.Count; i++)
+            {
+                dependencyClass.GetDependentOrder();
+
+            } 
+            
         }
 
         [When(@"checking against all nodes")]
@@ -73,7 +79,7 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
         [Then(@"the (.*) step that is done should be (.*)")]
         public void ThenTheStepThatIsDoneShouldBeC(int p0, char c0)
         {
-            throw new PendingStepException();
+            context.Get<StepDependency>("stepsDependency").orderOfNonDependent[p0].Should().Be(c0);
         }
 
     }
