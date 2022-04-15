@@ -23,13 +23,13 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
         public void WhenTheLineIsParsed()
         {
             StepDependency stepDependency = new StepDependency(context.Get<string>("practiceFile"));
-            context.Add("stepsDependency", stepDependency);
+            context.Add("stepDependency", stepDependency);
         }
 
         [Then(@"(.*) is done before (.*)")]
         public void ThenCIsDoneBeforeA(char c0, char c1)
         {
-            var stepDependencyList = context.Get<StepDependency>("stepsDependency").stepsList;
+            var stepDependencyList = context.Get<StepDependency>("stepDependency").stepsList;
 
             if (stepDependencyList.Count == 0) //This is the first fail condition. 
             {
@@ -61,7 +61,7 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
         [Given(@"list head")]
         public void GivenListHead()
         {
-            var dependencyClass = context.Get<StepDependency>("stepsDependency");
+            var dependencyClass = context.Get<StepDependency>("stepDependency");
             for (int i = 0; i < dependencyClass.stepsList.Count; i++)
             {
                 dependencyClass.GetDependentOrder();
@@ -71,7 +71,48 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
         [Then(@"the (.*) step that is done should be (.*)")]
         public void ThenTheStepThatIsDoneShouldBeC(int p0, char c0)
         {
-            context.Get<StepDependency>("stepsDependency").orderOfNonDependent[p0].Should().Be(c0);
+            context.Get<StepDependency>("stepDependency").orderOfNonDependent[p0].Should().Be(c0);
+        }
+
+        [Given(@"the letter (.*)")]
+        public void GivenTheLetter(char c0)
+        {
+            context.Add("letter", c0);
+        }
+
+        [When(@"doing that process")]
+        public void WhenDoingThatProcess()
+        {
+            int letterTime = Processes.getLetterTime(context.Get<char>("letter"));
+            context.Add("letterTime", letterTime);
+        }
+
+        [Then(@"it should take (.*) seconds")]
+        public void ThenItShouldTakeSeconds(int p0)
+        {
+            context.Get<int>("letterTime").Should().Be(p0);
+        }
+
+        [When(@"running multiple processes")]
+        public void WhenRunningMultipleProcesses()
+        {
+            int totalTime = Processes.getTotalTime(context.Get<StepDependency>("stepDependency"));
+            context.Add("totalTime", totalTime);
+
+            int quickestTime = Processes.getQuickestTime(context.Get<StepDependency>("stepDependency"));
+            context.Add("quickestTime", quickestTime);
+        }
+
+        [Then(@"the total time of the process should be (.*) seconds")]
+        public void ThenTheTotalTimeOfTheProcessShouldBeSeconds(int p0)
+        {
+            context.Get<int>("totalTime").Should().Be(p0);
+        }
+
+        [Then(@"the quickest time should be (.*) seconds")]
+        public void ThenTheQuickestTimeShouldBeSeconds(int p0)
+        {
+            context.Get<int>("quickestTime").Should().Be(p0);
         }
     }
 }

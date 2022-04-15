@@ -30,3 +30,23 @@ Scenario Outline: Find Dependencies
 	| 3      | D    |
 	| 4      | F    |
 	| 5      | E    |
+
+Scenario Outline: Test Individual Letter Speeds
+	Given the letter <letter>
+	When doing that process
+	Then it should take <time> seconds
+	Examples: 
+	| letter | time |
+	| A      | 61   |
+	| B      | 62   |
+	| C      | 63   |
+	| H      | 68   |
+	| S      | 79   |
+	| Z      | 86   |
+
+Scenario: Running Multiple Processes
+	Given the file path C:\Users\Cortl\Source\Repos\step-dependencies-Cortlynd101\Step_Dependencies\PracticeFile.txt
+	When the line is parsed
+	When running multiple processes
+	Then the total time of the process should be 1018 seconds
+	Then the quickest time should be 126 seconds
