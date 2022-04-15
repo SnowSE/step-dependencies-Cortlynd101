@@ -10,6 +10,7 @@ namespace Step_Dependencies
         public char[] orderOfNonDependent;
         public bool isCharDependent = true;
         public int charCount = 0;
+        public int currValue;
 
         public StepDependency()
         {
@@ -161,9 +162,18 @@ namespace Step_Dependencies
         {
             if(isCharDependent == false)
             {
+                getLetterTime(c);
                 orderOfNonDependent[charCount] = c;
                 charCount++;
             }
+        }
+
+        public void getLetterTime(char c)
+        {
+            //int letterTime = 60;
+            int letterTime = ((int)c - 4);
+            currValue = letterTime;
+            //return letterTime;
         }
 
         public void CharCanBeWritten(char c, int currList)

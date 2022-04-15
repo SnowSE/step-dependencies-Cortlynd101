@@ -118,8 +118,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
- testRunner.Given("the file path C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Depe" +
-                        "ndencies\\PracticeFile.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the file path C:\\Users\\brebr\\Source\\Repos\\step-dependencies-Cortlyn\\Step_Dependen" +
+                        "cies\\PracticeFile.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
  testRunner.When("the line is parsed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -167,8 +167,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 21
- testRunner.Given("the file path C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Depe" +
-                        "ndencies\\PracticeFile.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the file path C:\\Users\\brebr\\Source\\Repos\\step-dependencies-Cortlyn\\Step_Dependen" +
+                        "cies\\PracticeFile.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 22
  testRunner.When("the line is parsed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -259,8 +259,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 48
- testRunner.Given("the file path C:\\Users\\Cortl\\Source\\Repos\\step-dependencies-Cortlynd101\\Step_Depe" +
-                        "ndencies\\PracticeFile.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the file path C:\\Users\\brebr\\Source\\Repos\\step-dependencies-Cortlyn\\Step_Dependen" +
+                        "cies\\PracticeFile.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 49
  testRunner.When("the line is parsed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

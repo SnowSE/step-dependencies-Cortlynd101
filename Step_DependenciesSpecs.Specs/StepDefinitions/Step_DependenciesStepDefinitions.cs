@@ -96,11 +96,12 @@ namespace Step_DependenciesSpecs.Specs.StepDefinitions
         [When(@"running multiple processes")]
         public void WhenRunningMultipleProcesses()
         {
-            int totalTime = Processes.getTotalTime(context.Get<StepDependency>("stepDependency"));
-            context.Add("totalTime", totalTime);
+            var process = new Processes();
+            process.SubtractingTimeOffAsciiValues();
+            var time = process.timeCount;
+            context.Add("totalTime", time);
 
-            int quickestTime = Processes.getQuickestTime(context.Get<StepDependency>("stepDependency"));
-            context.Add("quickestTime", quickestTime);
+       
         }
 
         [Then(@"the total time of the process should be (.*) seconds")]
