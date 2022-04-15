@@ -3,7 +3,7 @@
 
 @mytag
 Scenario Outline: Create Dependencies
-	Given the file path C:\Users\Cortl\Source\Repos\step-dependencies-Cortlynd101\Step_Dependencies\PracticeFile.txt
+	Given the file path C:\Users\brebr\Source\Repos\step-dependencies-Cortlyn\Step_Dependencies\PracticeFile.txt
 	When the line is parsed
 	Then <firstChar> is done before <secondChar>
 	Examples: 
@@ -18,7 +18,7 @@ Scenario Outline: Create Dependencies
 
 
 Scenario Outline: Find Dependencies
-	Given the file path C:\Users\Cortl\Source\Repos\step-dependencies-Cortlynd101\Step_Dependencies\PracticeFile.txt
+	Given the file path C:\Users\brebr\Source\Repos\step-dependencies-Cortlyn\Step_Dependencies\PracticeFile.txt
 	When the line is parsed
 	Given list head
 	Then the <number> step that is done should be <char>
@@ -45,7 +45,7 @@ Scenario Outline: Test Individual Letter Speeds
 	| Z      | 86   |
 
 Scenario: Running Multiple Processes
-	Given the file path C:\Users\Cortl\Source\Repos\step-dependencies-Cortlynd101\Step_Dependencies\PracticeFile.txt
+	Given the file path C:\Users\brebr\Source\Repos\step-dependencies-Cortlyn\Step_Dependencies\PracticeFile.txt
 	When the line is parsed
 	When running multiple processes
 	Then the total time of the process should be 1018 seconds

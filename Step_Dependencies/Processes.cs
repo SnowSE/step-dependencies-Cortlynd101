@@ -5,10 +5,23 @@ namespace Step_Dependencies
 {
     public class Processes
     {
+        public int[] runningProcesses;
+        public int timeCount = 0;
+
+        public Processes()
+        {
+            runningProcesses = new int[5];
+            foreach( int i in runningProcesses)
+            {
+                runningProcesses[i] = 0;
+            }
+
+
+        }
         public static int getLetterTime(char c)
         {
-            int letterTime = 60;
-            letterTime = letterTime + ((int)c - 64);
+            //int letterTime = 60;
+            int letterTime = ((int)c - 4);
             return letterTime;
         }
 
@@ -41,6 +54,27 @@ namespace Step_Dependencies
 
 
             return quickestTime;
+        }
+
+        public void SubtractingTimeOffAsciiValues()
+        {
+            for(int i = 0; i < 5; i++)
+            {
+                movingToNextAvaiableProcess(i);
+                runningProcesses[i]--;
+            }
+            timeCount++;
+        }
+
+        public void movingToNextAvaiableProcess(int i)
+        {
+            var steps = new StepDependency();
+            if(runningProcesses[i] == 0)
+            {
+                steps.GetDependentOrder();
+                steps.currValue = runningProcesses[i];
+
+            }
         }
 
         private static void putEmptyChars(char[] process)
