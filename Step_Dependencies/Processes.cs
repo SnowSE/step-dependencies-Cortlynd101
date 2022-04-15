@@ -11,6 +11,11 @@ namespace Step_Dependencies
         public Processes()
         {
             runningProcesses = new int[5];
+            foreach( int i in runningProcesses)
+            {
+                runningProcesses[i] = 0;
+            }
+
 
         }
         public static int getLetterTime(char c)
